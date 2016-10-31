@@ -4,16 +4,20 @@
 using namespace std;
 
 template <class T>
-class NodoBinario{
+class NodoBin{
 public:
-	NodoBinario(T dato);
-	NodoBinario(T dato, NodoBinario<T> *izq, NodoBinario<T> *der);
+	NodoBin();
+	NodoBin(T dato);
+	NodoBin(T dato, NodoBin<T> *izq, NodoBin<T> *der);
 	T& info();
-	NodoBinario<T>*& i();
-	NodoBinario<T>*& d();
+	NodoBin<T>*& i();
+	NodoBin<T>*& d();
+	void enorden();
+	void preorden();
+	void postorden();
 	void imprimir();
 private:
 	T informacion;
-	NodoBinario *izquierdo;
-	NodoBinario *derecho;
+	NodoBin *izquierdo;
+	NodoBin *derecho;
 };
